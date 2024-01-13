@@ -1,0 +1,124 @@
+*,::after,::before{
+     box-sizing: border-box;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+/*layout skeleton*/
+.wrapper{
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+#sidebar{
+    max-width: 264px;
+    min-width: 264px;
+    transition: all 0.35s ease-in-out;
+    background-color: rgb(44, 96, 241);
+}
+
+/* sidebar collapse */
+#sidebar.collapsed {
+    margin-left: -264px;
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+.main .navbar{
+    background-color: rgb(44, 96, 241);
+}
+.sidebar-logo{
+    padding: 1.15rem 1.15rem ;
+    background-color: rgb(21, 40, 70);
+}
+.sidebar-logo a{
+    color: whitesmoke;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sidebar-nav{
+    padding: 0;
+}
+
+.sidebar-header{
+    color: whitesmoke;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link{
+    padding: .625rem 1.625rem;
+    color: whitesmoke;
+    position: relative;
+    display: block;
+    font-size: 1rem;
+}
+
+/* Ini adalah canvas dan code editor (livecode) */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Mengatur tinggi kontainer menjadi 100% dari tinggi viewport */
+}
+
+.row {
+    flex-grow: 1; /* Mengizinkan baris untuk tumbuh dan memenuhi ruang yang tersedia */
+    overflow: auto; /* Mengizinkan baris untuk menggulir jika kontennya melebihi tingginya */
+}
+
+iframe {
+    width: 100%;
+    height: 100%; /* Mengubah tinggi iframe menjadi 100% agar memenuhi ruang yang tersedia */
+    background: #ffffff;
+    border: 2px solid black;
+    outline: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 100%; /* Mengubah tinggi textarea menjadi 100% agar memenuhi ruang yang tersedia */
+    background: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+}
+
+/*ID soal */
+#peringkat {
+    /* Anda bisa menambahkan gaya untuk #peringkat di sini */
+    float: right; /* Mengatur #peringkat ke kanan */
+    width: 30%; /* Mengatur lebar #peringkat menjadi 30% */
+    position: sticky; /* Mengatur #peringkat menjadi sticky */
+    top: 0; /* Mengatur posisi sticky ke atas */
+}
+
+/* pdf */
+#soalukk{
+    height: 100vh;
+}
+#tombol{
+    width: 200px;
+
+}
